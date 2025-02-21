@@ -12,6 +12,9 @@ OBJS = $(SRCS:%.c=%.o)
 hw5: $(OBJS) 
 	$(GCC) $(OBJS) -o hw5
 
+.c.o:
+	$(GCC) -c $*.c
+
 testall: test1 test2 test3 test4
 
 test1: hw5
